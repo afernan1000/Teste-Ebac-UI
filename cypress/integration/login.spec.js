@@ -30,8 +30,7 @@ context('Funcionalidade Login', () => {
         cy.get('#password').type('@teste.com')
         cy.get('.woocommerce-form > .button').click()
         /// VALIDAÇÃO
-        cy.get('.woocommerce-error').should('contain', 'está incorreta')
-        
+        cy.get('.woocommerce-error').should('contain', 'está incorreta')        
     })
 
 })

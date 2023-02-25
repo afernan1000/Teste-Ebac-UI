@@ -22,7 +22,7 @@ context('Funcionalidade Login', () => {
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá,')
     })
 
-    it('Deve exibir uma mensagem de erro ao inserir usuario invalido', () => {
+    it('Deve exibir uma mensagem de erro ao inserir usuário inválido', () => {
         // TESTE
         cy.get('#username').type('_ebac@teste.com')
         cy.get('#password').type('teste@teste.com')
@@ -31,7 +31,7 @@ context('Funcionalidade Login', () => {
         cy.get('.woocommerce-error').should('contain', 'Endereço de e-mail desconhecido')
     })
 
-    it('Deve exibir uma mensagem de erro ao inserir senha invalida', () => {
+    it('Deve exibir uma mensagem de erro ao inserir senha inválida', () => {
         // TESTE
         cy.get('#username').type('aluno_ebac@teste.com')
         cy.get('#password').type('@teste.com')

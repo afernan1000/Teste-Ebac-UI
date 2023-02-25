@@ -3,7 +3,7 @@
 import { faker } from '@faker-js/faker';
 // FAKER - MOD. EMAIL, NOME E SOBRENOME
 
-describe('Funcionalidade Login', () => {
+describe('Funcionalidade Pré Cadastro', () => {
 
     beforeEach(() => {
         // HOOK - EXECUTA ANTES DE CADA TESTE

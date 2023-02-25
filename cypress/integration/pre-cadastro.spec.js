@@ -1,17 +1,17 @@
 /// <reference types="cypress" />
 
 var faker = require('faker');
-// FAKER
+// FAKER - MOD. EMAIL, NOME E SOBRENOME
 
 describe('Funcionalidade Login', () => {
 
     beforeEach(() => {
-        // HOOK EXECUTA ANTES DE CADA TESTE
+        // HOOK - EXECUTA ANTES DE CADA TESTE
         cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
     });
 
     afterEach(() => {
-        // HOOK EXECUTA DEPOIS DE CADA TESTE
+        // HOOK - EXECUTA DEPOIS DE CADA TESTE
         cy.screenshot()
     });
     

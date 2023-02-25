@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-var faker = require('faker');
+import { faker } from '@faker-js/faker';
 // FAKER - MOD. EMAIL, NOME E SOBRENOME
 
 describe('Funcionalidade Login', () => {

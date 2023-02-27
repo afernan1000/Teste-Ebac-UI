@@ -8,10 +8,10 @@ context('Funcionalidade Login', () => {
     });
 
     afterEach(() => {
-        // HOOK EXECUTA DEPOIS DE CADA TESTE
+        // HOOK - EXECUTA DEPOIS DE CADA TESTE
         cy.screenshot()
-    });
-
+    });    
+    
     it('Deve fazer login com sucesso', () => {
         // TESTE
         cy.get('#username').type('aluno_ebac@teste.com')

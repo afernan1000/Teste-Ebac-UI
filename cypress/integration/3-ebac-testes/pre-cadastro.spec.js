@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { faker } from '@faker-js/faker';
+const { faker } = require ('@faker-js/faker');
 // FAKER - MOD. EMAIL, NOME E SOBRENOME
 
 describe('Funcionalidade Pré Cadastro', () => {
@@ -13,7 +13,7 @@ describe('Funcionalidade Pré Cadastro', () => {
     afterEach(() => {
         // HOOK - EXECUTA DEPOIS DE CADA TESTE
         cy.screenshot()
-    });
+    });    
     
     it('Deve completar o pré cadastro com sucesso', () => {
         // CADASTRO

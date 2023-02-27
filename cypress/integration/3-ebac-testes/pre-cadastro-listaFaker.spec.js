@@ -3,7 +3,7 @@
 // FAKER EMAIL NOME SOBRENOME
 const { faker } = require('@faker-js/faker');
 
-describe('Funcionalidade Pré Cadastro', () => {
+describe('Funcionalidade Pré Cadastro + listaFaker', () => {
 
     // HOOK EXECUTA ANTES DE CADA TESTE
     beforeEach(() => {

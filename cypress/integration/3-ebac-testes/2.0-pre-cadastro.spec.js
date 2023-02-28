@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-// FAKER NOME SOBRENOME EMAIL
+// FAKER PARA NOME, SOBRENOME E EMAIL
 const { faker } = require('@faker-js/faker');
 
 describe('Funcionalidade Pré Cadastro', () => {

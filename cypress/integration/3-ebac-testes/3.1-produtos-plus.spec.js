@@ -2,6 +2,7 @@
 
 describe('Funcionalidade Escolha Múltipla de Produtos', () => {
 
+    // HOOK EXECUTA ANTES DE CADA TESTE
     beforeEach(() => {
         cy.visit('http://lojaebac.ebaconline.art.br/produtos/')
     });
@@ -16,11 +17,11 @@ describe('Funcionalidade Escolha Múltipla de Produtos', () => {
     })
 
     it('Deve selecionar alguns produtos da lista', () => {
-        // VARIÁVEL
+        // CRIANDO VARIÁVEIS
         var a = 5
         var b = 2
         var quantidade = a + b
-        // ESCOLHENDO O PRODUTO 1
+        // ESCOLHENDO PRODUTO 1
         cy.get('[class="product-block grid"]').contains('Abominable Hoodie').click()
         cy.get('.button-variable-item-L').click()
         cy.get('.button-variable-item-Red').click()

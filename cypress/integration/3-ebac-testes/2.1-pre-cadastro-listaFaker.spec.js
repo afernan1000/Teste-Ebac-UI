@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-// FAKER EMAIL NOME SOBRENOME
+// FAKER PARA NOME, SOBRENOME E EMAIL
 const { faker } = require('@faker-js/faker');
 
 describe('Funcionalidade Pré Cadastro + listaFaker', () => {
@@ -14,10 +14,10 @@ describe('Funcionalidade Pré Cadastro + listaFaker', () => {
     //afterEach(() => {cy.screenshot()});
 
     it('Deve completar o pré cadastro com sucesso', () => {
-        // LISTA FAKER
+        // CRIANDO LISTA FAKER
         let nomeFaker = faker.name.firstName()
         let sobrenomeFaker = faker.name.lastName()
-        // POSSO USAR O NOME E SOBRENOME NO EMAIL
+        // USANDO NOME E SOBRENOME NO EMAIL
         let emailFaker = faker.internet.email(nomeFaker + sobrenomeFaker)
         // FAZENDO CADASTRO
         cy.get('#reg_email').type(emailFaker)

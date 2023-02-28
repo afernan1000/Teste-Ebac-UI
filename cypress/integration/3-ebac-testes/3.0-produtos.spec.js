@@ -2,6 +2,7 @@
 
 describe('Funcionalidade Página de Produto', () => {
 
+    // HOOK EXECUTA ANTES DE CADA TESTE
     beforeEach(() => {
         cy.visit('http://lojaebac.ebaconline.art.br/produtos/')
     });
@@ -16,7 +17,7 @@ describe('Funcionalidade Página de Produto', () => {
     })
 
     it.only('Deve selecionar um produto da lista', () => {
-        // VARIÁVEL
+        // CRIANDO VARIÁVEL
         var quantidade = 20
         // ESCOLHENDO UM PRODUTO
         cy.get('[class="product-block grid"]').contains('Abominable Hoodie').click()

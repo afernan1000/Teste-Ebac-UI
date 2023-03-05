@@ -33,7 +33,6 @@ describe('Funcionalidade Escolha Múltipla de Produtos', () => {
         cy.get('#primary-menu > .menu-item-629 > a').click()
         // AVANÇA ATÉ A PÁGINA DESEJADA
         cy.get('.next').click()
-        cy.get('.next').click()
         // ESCOLHENDO O PRODUTO 2
         cy.get('[class="product-block grid"]').contains('Autumn Pullie').click()
         cy.get('.button-variable-item-M').click()

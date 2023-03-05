@@ -1,7 +1,7 @@
 {
   "name": "teste-ebac-ui",
   "version": "1.0.0",
-  "description": "",
+  "description": "Repositório para testes com Cypress na versão antiga",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

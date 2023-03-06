@@ -34,7 +34,7 @@ describe('Funcionalidade Pré Cadastro + listaFaker', () => {
         cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso')
     })
 
-    it('Deve completar o pré cadstro com sucesso - Usando comando customizados', () => {
+    it('Deve completar o pré cadstro com sucesso - Usando comandos customizados', () => {
         // RECRIANDO LISTA FAKER COMO 2 PORQUE O CYPRESS LIMPA VARIÁVEIS DE TESTES ANTERIORES
         let nomeFaker2 = faker.name.firstName()
         let sobrenomeFaker2 = faker.name.lastName()

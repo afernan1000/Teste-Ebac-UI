@@ -25,7 +25,7 @@ context('Funcionalidade Login - Usando Massa de Dados', () => {
     })
 
     it('Deve fazer login com sucesso - Usando Fixture', () => {
-        // APONTANDO PARA O FIXTURE E CRIANDO VARIAVEL DADOS
+        // APONTANDO PARA O PERFIL EM FIXTURE E CRIANDO VARIAVEL DADOS
         cy.fixture('perfil').then(dados => {
             // FAZENDO LOGIN COM A VARIAVEL DADOS
             cy.get('#username').type(dados.usuario)

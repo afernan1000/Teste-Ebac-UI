@@ -17,7 +17,7 @@ context('Funcionalidade Login - Usando Massa de Dados', () => {
         // FAZENDO LOGIN COM A CONSTANTE PERFIL
         cy.get('#username').type(perfil.usuario)
         // NÃO EXIBIR A SENHA NO TESTE LOG:FALSE
-        cy.get('#password').type(perfil.senha, {log: false})
+        cy.get('#password').type(perfil.senha, { log: false })
         cy.get('.woocommerce-form > .button').click()
         // VALIDAÇÃO
         cy.get('.page-title').should('contain', 'Minha conta')
@@ -30,12 +30,12 @@ context('Funcionalidade Login - Usando Massa de Dados', () => {
             // FAZENDO LOGIN COM A VARIAVEL DADOS
             cy.get('#username').type(dados.usuario)
             // NÃO EXIBIR A SENHA NO TESTE LOG:FALSE
-            cy.get('#password').type(dados.senha, {log: false})
+            cy.get('#password').type(dados.senha, { log: false })
             cy.get('.woocommerce-form > .button').click()
             // VALIDAÇÃO
             cy.get('.page-title').should('contain', 'Minha conta')
             cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá,')
         })
     })
-    
+
 })

@@ -36,7 +36,7 @@ describe('Funcionalidade Página de Produto', () => {
         // VALIDAÇÃO COM VALOR ESPECÍFICO DA QUANTIDADE
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain', 3)
         cy.get('.woocommerce-message').should('contain', 3 + ' × “Abominable Hoodie”')
-    });
+    })
 
     it('Deve selecionar um produto da lista - Usando comandos customizados + Variável', () => {
         // CRIANDO VARIÁVEL
@@ -46,6 +46,6 @@ describe('Funcionalidade Página de Produto', () => {
         // VALIDAÇÃO COM VALOR ESPECÍFICO DA QUANTIDADE
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
         cy.get('.woocommerce-message').should('contain', quantidade + ' × “Abominable Hoodie”')
-    });
+    })
 
 })

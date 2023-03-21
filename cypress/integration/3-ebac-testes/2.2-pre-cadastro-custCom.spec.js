@@ -46,6 +46,6 @@ describe('Funcionalidade Pré Cadastro + listaFaker', () => {
         cy.preCadastro(emailFaker2, senhaFaker2, nomeFaker2, sobrenomeFaker2)
         // VALIDAÇÃO
         cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso')
-    });
+    })
 
 })

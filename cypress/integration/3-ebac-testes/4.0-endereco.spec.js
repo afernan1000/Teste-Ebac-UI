@@ -10,7 +10,7 @@ describe('Funcionalidade Endereços - Faturamento e Entrega', () => {
         // APONTANDO PARA O PERFIL EM FIXTURE E CRIANDO VARIAVEL DADOS
         cy.fixture('perfil').then(dados => {
             // FAZENDO LOGIN COM COMANDOS CUSTOMIZADOS E COM A VARIAVEL DADOS
-            cy.login(dados.usuario, dados.senha)            
+            cy.login(dados.usuario, dados.senha)
         })
     });
 
@@ -19,5 +19,6 @@ describe('Funcionalidade Endereços - Faturamento e Entrega', () => {
         enderecoPage.editarEnderecoFaturamento('André', 'Fernandes', 'EBAC', 'Brasil', 'Av. Rio Branco', '2001', 'São Paulo', 'São Paulo', '01000100', '1199999999', 'andre@ebac.com')
         // VALIDAÇÃO
         cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso')
-    });
-});
+    })
+
+})

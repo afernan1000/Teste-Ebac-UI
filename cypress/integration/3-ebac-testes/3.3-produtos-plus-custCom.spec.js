@@ -47,7 +47,7 @@ describe('Funcionalidade Escolha Múltipla de Produtos', () => {
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
     })
 
-    it('Deve selecionar alguns produtos da lista - Usando comandos customizados', () => {        
+    it('Deve selecionar alguns produtos da lista - Usando comandos customizados', () => {
         // ESCOLHENDO PRODUTO 1
         cy.addProdutos('Abominable Hoodie', 'L', 'Red', 5)
         // VALIDAÇÃO PARCIAL 1
@@ -64,7 +64,7 @@ describe('Funcionalidade Escolha Múltipla de Produtos', () => {
         cy.get('.woocommerce-message > .button').click()
         // VALIDAÇÃO FINAL
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain', 7)
-    });
+    })
 
     it('Deve selecionar alguns produtos da lista - Usando comandos customizados + Variável', () => {
         // CRIANDO VARIÁVEIS
@@ -87,6 +87,6 @@ describe('Funcionalidade Escolha Múltipla de Produtos', () => {
         cy.get('.woocommerce-message > .button').click()
         // VALIDAÇÃO FINAL
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
-    });
+    })
 
 })

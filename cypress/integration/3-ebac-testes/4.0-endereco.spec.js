@@ -1,5 +1,8 @@
 /// <reference types="cypress" />
 
+// FAZENDO A IMPORTAÇÃO DO PAGE OBJECTS DA PASTA SUPPORT
+import enderecoPage from "../../support/page-objects/endereco.page";
+
 describe('Funcionalidade Endereços - Faturamento e Entrega', () => {
 
     beforeEach(() => {
@@ -12,12 +15,9 @@ describe('Funcionalidade Endereços - Faturamento e Entrega', () => {
     });
 
     it('Deve fazer cadastro de faturamento com sucesso', () => {
-        // VALIDAÇÃO PARCIAL
-        cy.get('.page-title').should('contain', 'Minha conta')
-        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá,')
-        // OPÇÃO ENDEREÇOS
-        cy.get('.woocommerce-MyAccount-navigation-link--edit-address > a').click()
-        // VALIDAÇÃO FINAL
-        cy.get('h2').should('contain', 'My Addresses')
+        // PASSO PARA MEU MÉTODO TODOS OS PARAMETOS EXIGIDOS DO ARQUIVO PAGE-OBJECTS
+        enderecoPage.editarEnderecoFaturamento('André', 'Fernandes', 'EBAC', 'Brasil', 'Av. Rio Branco', '2001', 'São Paulo', 'São Paulo', '01000100', '1199999999', 'andre@ebac.com')
+        // VALIDAÇÃO
+        cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso')
     });
 });

@@ -14,9 +14,16 @@ describe('Funcionalidade Endereços - Faturamento e Entrega', () => {
         })
     });
 
-    it('Deve fazer cadastro de faturamento com sucesso', () => {
+    it('Deve editar o cadastro de endereço de faturamento com sucesso', () => {
         // PASSO PARA MEU MÉTODO TODOS OS PARAMETOS EXIGIDOS DO ARQUIVO PAGE-OBJECTS
         enderecoPage.editarEnderecoFaturamento('André', 'Fernandes', 'EBAC', 'Brasil', 'Av. Rio Branco', '2001', 'São Paulo', 'São Paulo', '01000100', '1199999999', 'andre@ebac.com')
+        // VALIDAÇÃO
+        cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso')
+    })
+
+    it('Deve editar o cadastro do endereço de entrega com sucesso', () => {
+        // PASSO PARA MEU MÉTODO TODOS OS PARAMETOS EXIGIDOS DO ARQUIVO PAGE-OBJECTS
+        enderecoPage.editarEnderecoEntrega('André', 'Fernandes', 'EBAC', 'Brasil', 'Av. Rio Branco', '2001', 'São Paulo', 'São Paulo', '01000100')
         // VALIDAÇÃO
         cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso')
     })

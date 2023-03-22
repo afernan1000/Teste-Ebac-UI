@@ -17,14 +17,21 @@ describe('Funcionalidade Endereços - Faturamento e Entrega', () => {
         })
     });
 
-    it('Deve fazer cadastro de faturamento com sucesso', () => {
+    it.skip('Deve editar o cadastro do endereço de faturamento com sucesso', () => {
         // APONTO PARA MEU MÉTODO TODOS OS PARAMETOS EXIGIDOS DO ARQUIVO PAGE-OBJECTS
         enderecoPage.editarEnderecoFaturamento('André', 'Fernandes', 'EBAC', 'Brasil', 'Av. Rio Branco', '2001', 'São Paulo', 'São Paulo', '01000100', '1199999999', 'andre@ebac.com')
         // VALIDAÇÃO
         cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso')
     })
 
-    it.only('Deve fazer cadastro de faturamento com sucesso - Usando Lista de Dados', () => {
+    it.skip('Deve editar o cadastro do endereço de entrega com sucesso', () => {
+        // PASSO PARA MEU MÉTODO TODOS OS PARAMETOS EXIGIDOS DO ARQUIVO PAGE-OBJECTS
+        enderecoPage.editarEnderecoEntrega('André', 'Fernandes', 'EBAC', 'Brasil', 'Av. Rio Branco', '2001', 'São Paulo', 'São Paulo', '01000100')
+        // VALIDAÇÃO
+        cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso')
+    })
+
+    it('Deve editar o cadastro do endereço de faturamento com sucesso - Usando Lista de Dados', () => {
         // APONTO PARA MEU MÉTODO USAR A LISTA DE DADOS NO ARQUIVO ENDEREÇO EM FIXTURES
         // ATENÇÃO PARA IMPORTAR A LISTA DE INICINADO EM 0,1,2...N
         enderecoPage.editarEnderecoFaturamento(
@@ -39,6 +46,24 @@ describe('Funcionalidade Endereços - Faturamento e Entrega', () => {
             dadosEnredeco[1].cep,
             dadosEnredeco[1].telefone,
             dadosEnredeco[1].email
+        )
+        // VALIDAÇÃO
+        cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso')
+    })
+
+    it('Deve editar o cadastro do endereço de entrega com sucesso - Usando Lista de Dados', () => {
+        // APONTO PARA MEU MÉTODO USAR A LISTA DE DADOS NO ARQUIVO ENDEREÇO EM FIXTURES
+        // ATENÇÃO PARA IMPORTAR A LISTA DE INICINADO EM 0,1,2...N
+        enderecoPage.editarEnderecoEntrega(
+            dadosEnredeco[2].nome,
+            dadosEnredeco[2].sobrenome,
+            dadosEnredeco[2].empresa,
+            dadosEnredeco[2].pais,
+            dadosEnredeco[2].endereco,
+            dadosEnredeco[2].numero,
+            dadosEnredeco[2].cidade,
+            dadosEnredeco[2].estado,
+            dadosEnredeco[2].cep,
         )
         // VALIDAÇÃO
         cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso')

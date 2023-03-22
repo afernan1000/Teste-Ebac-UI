@@ -1,13 +1,13 @@
 /// <reference types="cypress" />
 
-describe('Funcionalidade Página de Produto', () => {
+describe('Funcionalidade Página de Produtos - Usando Comandos Customizados', () => {
 
     // HOOK EXECUTA ANTES DE CADA TESTE
     beforeEach(() => {
         cy.visit('http://lojaebac.ebaconline.art.br/produtos/')
     });
 
-    it('Deve selecionar um produto da lista - Usando comandos customizados', () => {
+    it('Deve selecionar um produto da lista - Usando Comandos Customizados', () => {
         // ESCOLHENDO UM PRODUTO
         cy.addProdutos('Abominable Hoodie', 'L', 'Green', 3)
         // VALIDAÇÃO COM VALOR ESPECÍFICO DA QUANTIDADE
@@ -15,7 +15,7 @@ describe('Funcionalidade Página de Produto', () => {
         cy.get('.woocommerce-message').should('contain', 3 + ' × “Abominable Hoodie”')
     })
 
-    it('Deve selecionar um produto da lista - Usando comandos customizados + Variável', () => {
+    it('Deve selecionar um produto da lista - Usando Comandos Customizados com Variável', () => {
         // CRIANDO VARIÁVEL
         var quantidade = 3
         // ESCOLHENDO UM PRODUTO

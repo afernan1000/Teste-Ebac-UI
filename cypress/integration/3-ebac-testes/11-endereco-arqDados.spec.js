@@ -6,7 +6,7 @@ import enderecoPage from "../../support/page-objects/endereco.page";
 // CRIando A MINHA CONSTANTE
 const dadosEnredeco = require('../../fixtures/endereco.json')
 
-describe('Funcionalidade Endereços - Faturamento e Entrega', () => {
+describe('Funcionalidade Endereços - Faturamento e Entrega - Usando Massa de Dados', () => {
 
     beforeEach(() => {
         cy.visit('minha conta')
@@ -17,7 +17,7 @@ describe('Funcionalidade Endereços - Faturamento e Entrega', () => {
         })
     });
 
-    it('Deve editar o cadastro do endereço de faturamento com sucesso - Usando lista de dados', () => {
+    it('Deve editar o cadastro do endereço de faturamento com sucesso - Usando Lista de Dados', () => {
         // APONTO PARA MEU MÉTODO USAR A LISTA DE DADOS NO ARQUIVO ENDEREÇO EM FIXTURES
         // ATENÇÃO PARA IMPORTAR A LISTA DE INICINADO EM 0,1,2...N
         enderecoPage.editarEnderecoFaturamento(
@@ -37,7 +37,7 @@ describe('Funcionalidade Endereços - Faturamento e Entrega', () => {
         cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso')
     })
 
-    it('Deve editar o cadastro do endereço de entrega com sucesso - Usando lista de dados', () => {
+    it('Deve editar o cadastro do endereço de entrega com sucesso - Usando Lista de Dados', () => {
         // APONTO PARA MEU MÉTODO USAR A LISTA DE DADOS NO ARQUIVO ENDEREÇO EM FIXTURES
         // ATENÇÃO PARA IMPORTAR A LISTA DE INICINADO EM 0,1,2...N
         enderecoPage.editarEnderecoEntrega(

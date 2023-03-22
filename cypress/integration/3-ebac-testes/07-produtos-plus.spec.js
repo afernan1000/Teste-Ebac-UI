@@ -1,13 +1,13 @@
 /// <reference types="cypress" />
 
-describe('Funcionalidade Escolha Múltipla de Produtos', () => {
+describe('Funcionalidade Escolha Multipla de Produtos', () => {
 
     // HOOK EXECUTA ANTES DE CADA TESTE
     beforeEach(() => {
         cy.visit('http://lojaebac.ebaconline.art.br/produtos/')
     });
 
-    it('Deve selecionar alguns produtos da lista', () => {
+    it('Deve selecionar multiplos produtos da lista', () => {
         // CRIANDO VARIÁVEIS
         var a = 5
         var b = 2

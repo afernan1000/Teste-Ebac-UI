@@ -1,13 +1,13 @@
 /// <reference types="cypress" />
 
-describe('Funcionalidade Escolha Múltipla de Produtos', () => {
+describe('Funcionalidade Escolha Multipla de Produtos', () => {
 
     // HOOK EXECUTA ANTES DE CADA TESTE
     beforeEach(() => {
         cy.visit('http://lojaebac.ebaconline.art.br/produtos/')
     });
 
-    it('Deve selecionar alguns produtos da lista - Usando comandos customizados', () => {
+    it('Deve selecionar multiplos produtos da lista - Usando Comandos Customizados', () => {
         // ESCOLHENDO PRODUTO 1
         cy.addProdutos('Abominable Hoodie', 'L', 'Red', 5)
         // VALIDAÇÃO PARCIAL 1
@@ -26,7 +26,7 @@ describe('Funcionalidade Escolha Múltipla de Produtos', () => {
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain', 7)
     })
 
-    it('Deve selecionar alguns produtos da lista - Usando comandos customizados + Variável', () => {
+    it('Deve selecionar multiplos produtos da lista - Usando Comandos Customizados com Variável', () => {
         // CRIANDO VARIÁVEIS
         var a = 5
         var b = 2

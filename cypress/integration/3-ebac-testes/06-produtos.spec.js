@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Funcionalidade Página de Produto', () => {
+describe('Funcionalidade Página de Produtos', () => {
 
     // HOOK EXECUTA ANTES DE CADA TESTE
     beforeEach(() => {

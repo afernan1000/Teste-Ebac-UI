@@ -3,7 +3,7 @@
 // FAKER PARA NOME, SOBRENOME E EMAIL
 const { faker } = require('@faker-js/faker');
 
-describe('Funcionalidade Pré Cadastro + listaFaker', () => {
+describe('Funcionalidade Pré Cadastro - Usando Lista Faker', () => {
 
     // HOOK EXECUTA ANTES DE CADA TESTE
     beforeEach(() => {
@@ -13,7 +13,7 @@ describe('Funcionalidade Pré Cadastro + listaFaker', () => {
     // HOOK EXECUTA DEPOIS DE CADA TESTE
     //afterEach(() => {cy.screenshot()});
 
-    it('Deve completar o pré cadastro com sucesso', () => {
+    it('Deve completar o pré cadastro com sucesso - Usando Lista Faker', () => {
         // CRIANDO LISTA FAKER
         let nomeFaker = faker.name.firstName()
         let sobrenomeFaker = faker.name.lastName()

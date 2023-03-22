@@ -3,7 +3,7 @@
 // FAKER PARA NOME, SOBRENOME E EMAIL
 const { faker } = require('@faker-js/faker');
 
-describe('Funcionalidade Pré Cadastro + listaFaker', () => {
+describe('Funcionalidade Pré Cadastro - Usando Comando Customizados', () => {
 
     // HOOK EXECUTA ANTES DE CADA TESTE
     beforeEach(() => {
@@ -13,7 +13,7 @@ describe('Funcionalidade Pré Cadastro + listaFaker', () => {
     // HOOK EXECUTA DEPOIS DE CADA TESTE
     //afterEach(() => {cy.screenshot()});
 
-    it('Deve completar o pré cadstro com sucesso - Usando comandos customizados', () => {
+    it('Deve completar o pré cadstro com sucesso - Usando Comandos Customizados', () => {
         // RECRIANDO LISTA FAKER COMO 2 PORQUE O CYPRESS LIMPA VARIÁVEIS DE TESTES ANTERIORES
         let nomeFaker2 = faker.name.firstName()
         let sobrenomeFaker2 = faker.name.lastName()

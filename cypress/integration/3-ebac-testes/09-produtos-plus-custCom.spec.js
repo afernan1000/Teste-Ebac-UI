@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Funcionalidade Escolha Multipla de Produtos', () => {
+describe('Funcionalidade Escolha Multipla de Produtos - Usando Comandos Customizados', () => {
 
     // HOOK EXECUTA ANTES DE CADA TESTE
     beforeEach(() => {

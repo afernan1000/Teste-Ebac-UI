@@ -104,5 +104,4 @@ dist
 .tern-port
 
 # Screenshots and Videos
-/cypress/videos
 /cypress/screenshots

@@ -8,7 +8,7 @@
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run --browser chrome",
     "cy:ebac": "npx cypress run --browser chrome --spec 'C:/GitHub/Teste-Ebac-UI/cypress/integration/3-ebac-testes/*.spec.js'",
-    "cy:report": "cypress run --browser chrome --spec 'C:/GitHub/Teste-Ebac-UI/cypress/integration/3-ebac-testes/*.spec.js' --record --key 5aa769d0-ae93-4cfe-a390-d37efb652ad2"
+    "cy:ebac-report": "cypress run --browser chrome --spec 'C:/GitHub/Teste-Ebac-UI/cypress/integration/3-ebac-testes/*.spec.js' --record --key 5aa769d0-ae93-4cfe-a390-d37efb652ad2"
   },
   "keywords": [],
   "author": "",

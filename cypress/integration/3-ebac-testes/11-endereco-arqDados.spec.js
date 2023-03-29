@@ -4,7 +4,7 @@
 import enderecoPage from "../../support/page-objects/endereco.page";
 
 // CRIando A MINHA CONSTANTE
-const dadosEnredeco = require('../../fixtures/endereco.json')
+const dadosEndereco = require('../../fixtures/endereco.json')
 
 describe('Funcionalidade Endereços - Faturamento e Entrega - Usando Massa de Dados', () => {
 
@@ -21,17 +21,17 @@ describe('Funcionalidade Endereços - Faturamento e Entrega - Usando Massa de Da
         // APONTO PARA MEU MÉTODO USAR A LISTA DE DADOS NO ARQUIVO ENDEREÇO EM FIXTURES
         // ATENÇÃO PARA IMPORTAR A LISTA DE INICINADO EM 0,1,2...N
         enderecoPage.editarEnderecoFaturamento(
-            dadosEnredeco[1].nome,
-            dadosEnredeco[1].sobrenome,
-            dadosEnredeco[1].empresa,
-            dadosEnredeco[1].pais,
-            dadosEnredeco[1].endereco,
-            dadosEnredeco[1].numero,
-            dadosEnredeco[1].cidade,
-            dadosEnredeco[1].estado,
-            dadosEnredeco[1].cep,
-            dadosEnredeco[1].telefone,
-            dadosEnredeco[1].email
+            dadosEndereco[1].nome,
+            dadosEndereco[1].sobrenome,
+            dadosEndereco[1].empresa,
+            dadosEndereco[1].pais,
+            dadosEndereco[1].endereco,
+            dadosEndereco[1].numero,
+            dadosEndereco[1].cidade,
+            dadosEndereco[1].estado,
+            dadosEndereco[1].cep,
+            dadosEndereco[1].telefone,
+            dadosEndereco[1].email
         )
         // VALIDAÇÃO
         cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso')

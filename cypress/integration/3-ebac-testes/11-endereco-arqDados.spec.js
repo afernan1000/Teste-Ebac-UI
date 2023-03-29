@@ -41,15 +41,15 @@ describe('Funcionalidade Endereços - Faturamento e Entrega - Usando Massa de Da
         // APONTO PARA MEU MÉTODO USAR A LISTA DE DADOS NO ARQUIVO ENDEREÇO EM FIXTURES
         // ATENÇÃO PARA IMPORTAR A LISTA DE INICINADO EM 0,1,2...N
         enderecoPage.editarEnderecoEntrega(
-            dadosEnredeco[2].nome,
-            dadosEnredeco[2].sobrenome,
-            dadosEnredeco[2].empresa,
-            dadosEnredeco[2].pais,
-            dadosEnredeco[2].endereco,
-            dadosEnredeco[2].numero,
-            dadosEnredeco[2].cidade,
-            dadosEnredeco[2].estado,
-            dadosEnredeco[2].cep,
+            dadosEndereco[2].nome,
+            dadosEndereco[2].sobrenome,
+            dadosEndereco[2].empresa,
+            dadosEndereco[2].pais,
+            dadosEndereco[2].endereco,
+            dadosEndereco[2].numero,
+            dadosEndereco[2].cidade,
+            dadosEndereco[2].estado,
+            dadosEndereco[2].cep,
         )
         // VALIDAÇÃO
         cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso')

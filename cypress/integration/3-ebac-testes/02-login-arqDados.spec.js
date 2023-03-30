@@ -11,7 +11,9 @@ context('Funcionalidade Login - Usando Massa de Dados', () => {
     });
 
     // HOOK EXECUTA DEPOIS DE CADA TESTE
-    //afterEach(() => {cy.screenshot()});
+    /* afterEach(() => {
+        cy.screenshot()
+    }); */
 
     it('Deve fazer login com sucesso - Usando Arquivo de Dados', () => {
         // FAZENDO LOGIN COM A CONSTANTE PERFIL

@@ -11,7 +11,9 @@ describe('Funcionalidade Pré Cadastro', () => {
     });
 
     // HOOK EXECUTA DEPOIS DE CADA TESTE
-    //afterEach(() => {cy.screenshot()});
+    /* afterEach(() => {
+        cy.screenshot()
+    }); */
 
     it('Deve completar o pré cadastro com sucesso', () => {
         // FAZENDO CADASTRO

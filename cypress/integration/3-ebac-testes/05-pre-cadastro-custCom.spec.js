@@ -11,7 +11,9 @@ describe('Funcionalidade Pré Cadastro - Usando Comando Customizados', () => {
     });
 
     // HOOK EXECUTA DEPOIS DE CADA TESTE
-    //afterEach(() => {cy.screenshot()});
+    /* afterEach(() => {
+        cy.screenshot()
+    }); */
 
     it('Deve completar o pré cadstro com sucesso - Usando Comandos Customizados', () => {
         // RECRIANDO LISTA FAKER COMO 2 PORQUE O CYPRESS LIMPA VARIÁVEIS DE TESTES ANTERIORES

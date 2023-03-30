@@ -11,7 +11,9 @@ describe('Funcionalidade Pré Cadastro - Usando Lista Faker', () => {
     });
 
     // HOOK EXECUTA DEPOIS DE CADA TESTE
-    //afterEach(() => {cy.screenshot()});
+    /* afterEach(() => {
+        cy.screenshot()
+    }); */
 
     it('Deve completar o pré cadastro com sucesso - Usando Lista Faker', () => {
         // CRIANDO LISTA FAKER
